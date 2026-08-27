@@ -3,140 +3,494 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JO Macode Store</title>
+
+  <title>TIFFAH COLLECTION | Style • Quality • Confidence</title>
+
+  <meta name="description" content="TIFFAH COLLECTION - Fashion ya kisasa, quality na style. T-Shirts, Jeans, Magauni na fashion mbalimbali. Kilimahewa, Mwanza.">
+  <meta name="keywords" content="Tiffah Collection, fashion Mwanza, nguo Mwanza, T-shirts, Jeans, Magauni">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      background: #080808;
-      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050505;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 40px 20px;
+      background:
+        radial-gradient(circle at top, rgba(218, 170, 38, 0.20), transparent 40%),
+        linear-gradient(180deg, #090909, #020202);
     }
 
     .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 30px 20px;
-      background:
-        radial-gradient(circle at top, #3a2b00 0%, #080808 45%);
+      max-width: 900px;
+      width: 100%;
     }
 
-    .logo {
-      font-size: 48px;
+    .brand {
+      color: #d9ad32;
+      font-size: clamp(42px, 10vw, 88px);
       font-weight: 900;
-      letter-spacing: 3px;
-      color: #d4af37;
+      letter-spacing: 4px;
+      text-transform: uppercase;
       margin-bottom: 10px;
+      text-shadow: 0 0 25px rgba(217, 173, 50, 0.25);
     }
 
     .tagline {
-      font-size: 18px;
-      color: #ddd;
-      margin-bottom: 35px;
-    }
-
-    .welcome {
-      max-width: 600px;
-      font-size: 18px;
-      line-height: 1.7;
-      color: #bbb;
+      font-size: clamp(16px, 4vw, 24px);
+      letter-spacing: 5px;
+      color: #eeeeee;
       margin-bottom: 30px;
     }
 
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 35px;
+      font-size: 18px;
+      color: #cccccc;
+    }
+
+    /* BUTTON */
+    .whatsapp-btn {
+      display: inline-block;
+      background: #d9ad32;
+      color: #080808;
+      padding: 17px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 17px;
+      transition: 0.3s;
+      box-shadow: 0 0 25px rgba(217, 173, 50, 0.25);
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-4px);
+      background: #f0c94d;
+      box-shadow: 0 0 35px rgba(217, 173, 50, 0.4);
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #222;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d9ad32;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #d9ad32;
+      font-size: 36px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 45px;
+    }
+
+    /* CATEGORIES */
     .categories {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 35px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
     }
 
     .category {
-      border: 1px solid #d4af37;
-      color: #d4af37;
-      padding: 12px 20px;
-      border-radius: 30px;
-      font-weight: bold;
-    }
-
-    .whatsapp {
-      display: inline-block;
-      background: #d4af37;
-      color: #080808;
-      text-decoration: none;
-      padding: 16px 30px;
-      border-radius: 35px;
-      font-size: 18px;
-      font-weight: bold;
-      box-shadow: 0 0 25px rgba(212,175,55,0.3);
+      border: 1px solid #333;
+      background: #0d0d0d;
+      border-radius: 18px;
+      padding: 35px 20px;
+      text-align: center;
       transition: 0.3s;
     }
 
-    .whatsapp:hover {
-      transform: scale(1.05);
+    .category:hover {
+      transform: translateY(-7px);
+      border-color: #d9ad32;
+      box-shadow: 0 10px 30px rgba(217, 173, 50, 0.10);
     }
 
-    .location {
-      margin-top: 30px;
+    .category-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .category h3 {
+      color: #ffffff;
+      font-size: 22px;
+    }
+
+    .category p {
+      color: #999;
+      margin-top: 8px;
+    }
+
+    /* WHY US */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .feature {
+      background: #0c0c0c;
+      border-radius: 18px;
+      padding: 30px 20px;
+      text-align: center;
+      border: 1px solid #222;
+    }
+
+    .feature span {
+      font-size: 35px;
+    }
+
+    .feature h3 {
+      margin: 12px 0 8px;
+      color: #d9ad32;
+    }
+
+    .feature p {
       color: #aaa;
-      line-height: 1.8;
     }
 
+    /* CONTACT */
+    .contact-box {
+      background: linear-gradient(145deg, #111111, #080808);
+      border: 1px solid #333;
+      border-radius: 25px;
+      padding: 45px 25px;
+      text-align: center;
+    }
+
+    .contact-item {
+      margin: 18px 0;
+      font-size: 18px;
+      color: #ddd;
+    }
+
+    .contact-item strong {
+      color: #d9ad32;
+    }
+
+    .phone {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
     footer {
-      margin-top: 45px;
-      color: #666;
-      font-size: 14px;
+      text-align: center;
+      padding: 35px 20px;
+      border-top: 1px solid #222;
+      color: #777;
+      background: #030303;
+    }
+
+    footer strong {
+      color: #d9ad32;
+    }
+
+    /* FLOATING WHATSAPP */
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 28px;
+      z-index: 2000;
+      box-shadow: 0 5px 25px rgba(37, 211, 102, 0.35);
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+
+      nav {
+        padding: 12px 8px;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 12px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 60px 18px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .contact-box {
+        padding: 35px 18px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <section class="hero">
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#collection">COLLECTION</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
 
-    <div class="logo">JO MACODE</div>
+  <!-- HERO -->
+  <header id="home">
+    <div class="hero">
 
-    <div class="tagline">
-      STYLE • QUALITY • CONFIDENCE
+      <div class="brand">
+        TIFFAH COLLECTION
+      </div>
+
+      <div class="tagline">
+        STYLE • QUALITY • CONFIDENCE
+      </div>
+
+      <p class="intro">
+        Karibu TIFFAH COLLECTION — sehemu yako ya kupata fashion
+        yenye style, quality na muonekano wa kipekee.
+        Tunakuletea fashion inayokupa confidence kila siku.
+      </p>
+
+      <a
+        class="whatsapp-btn"
+        href="https://wa.me/255686281609?text=Habari%20TIFFAH%20COLLECTION%2C%20nimeona%20website%20yenu%20na%20nahitaji%20kuagiza."
+        target="_blank"
+      >
+        🛍️ ORDER VIA WHATSAPP
+      </a>
+
     </div>
+  </header>
 
-    <p class="welcome">
-      Karibu JO Macode Store — sehemu yako ya kupata fashion
-      yenye style, quality na muonekano wa kipekee.
+  <!-- COLLECTION -->
+  <section id="collection">
+
+    <h2 class="section-title">
+      Our Collection
+    </h2>
+
+    <p class="section-subtitle">
+      Chagua style yako. Vaa confidence yako.
     </p>
 
     <div class="categories">
-      <div class="category">T-Shirts</div>
-      <div class="category">Jeans</div>
-      <div class="category">Magauni</div>
-      <div class="category">Fashion</div>
+
+      <div class="category">
+        <div class="category-icon">👕</div>
+        <h3>T-Shirts</h3>
+        <p>Style za kisasa na quality nzuri.</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">👖</div>
+        <h3>Jeans</h3>
+        <p>Jeans zenye style na fit nzuri.</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">👗</div>
+        <h3>Magauni</h3>
+        <p>Fashion nzuri kwa kila occasion.</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">✨</div>
+        <h3>Fashion</h3>
+        <p>Fashion mbalimbali kwa muonekano wako.</p>
+      </div>
+
     </div>
-
-    <a class="whatsapp"
-       href="https://wa.me/255686281609"
-       target="_blank">
-      ORDER VIA WHATSAPP
-    </a>
-
-    <div class="location">
-      📍 Kilimahewa, Mwanza<br>
-      📞 0686 281 609
-    </div>
-
-    <footer>
-      © 2026 JO Macode Store. All Rights Reserved.
-    </footer>
 
   </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <h2 class="section-title">
+      Why Tiffah?
+    </h2>
+
+    <p class="section-subtitle">
+      Tunakuletea zaidi ya nguo — tunakuletea confidence.
+    </p>
+
+    <div class="features">
+
+      <div class="feature">
+        <span>💎</span>
+        <h3>Quality</h3>
+        <p>
+          Tunazingatia quality ili upate bidhaa yenye thamani.
+        </p>
+      </div>
+
+      <div class="feature">
+        <span>🔥</span>
+        <h3>New Styles</h3>
+        <p>
+          Tunakuletea styles mpya na fashion zinazovutia.
+        </p>
+      </div>
+
+      <div class="feature">
+        <span>🤝</span>
+        <h3>Trusted Service</h3>
+        <p>
+          Huduma nzuri na mawasiliano rahisi na wateja wetu.
+        </p>
+      </div>
+
+      <div class="feature">
+        <span>👑</span>
+        <h3>Confidence</h3>
+        <p>
+          Vaa vizuri, jiamini na onyesha style yako.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <h2 class="section-title">
+      Contact Us
+    </h2>
+
+    <p class="section-subtitle">
+      Tupo tayari kukuhudumia.
+    </p>
+
+    <div class="contact-box">
+
+      <div class="contact-item">
+        📍 <strong>Location:</strong><br>
+        Kilimahewa, Mwanza
+      </div>
+
+      <div class="contact-item">
+        📞 <strong>Phone / WhatsApp:</strong><br>
+        <a
+          class="phone"
+          href="https://wa.me/255686281609"
+          target="_blank"
+        >
+          0686 281 609
+        </a>
+      </div>
+
+      <div class="contact-item">
+        🛍️ <strong>Orders:</strong><br>
+        Tunapokea orders kupitia WhatsApp.
+      </div>
+
+      <br>
+
+      <a
+        class="whatsapp-btn"
+        href="https://wa.me/255686281609?text=Habari%20TIFFAH%20COLLECTION%2C%20nahitaji%20kuagiza%20bidhaa."
+        target="_blank"
+      >
+        💬 CHAT WITH US ON WHATSAPP
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 <strong>TIFFAH COLLECTION</strong>.
+      All Rights Reserved.
+    </p>
+
+    <p>
+      STYLE • QUALITY • CONFIDENCE
+    </p>
+
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/255686281609?text=Habari%20TIFFAH%20COLLECTION%2C%20nahitaji%20kuagiza."
+    target="_blank"
+    aria-label="WhatsApp"
+  >
+    💬
+  </a>
 
 </body>
 </html>
